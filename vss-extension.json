@@ -1,0 +1,148 @@
+{
+    "manifestVersion": 1,
+    "id": "azure-consumption-widget",
+    "name": "Azure Consumption Widget",
+    "version": "0.0.1",
+    "publisher": "keesschollaart",
+    "public": true,
+    "helpMarkDown": "[More Information](https://github.com/keesschollaart81/vsts-azure-consumption-widget)",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "This Widget enables you to show your Azure Consumption on a dashboard page",
+    "categories": [ 
+    ],
+    "tags": [
+        "azure",
+        "consumption",
+        "cost",
+        "price",
+        "dollar",
+        "euro",
+        "widget",
+        "Dashboard Widgets"
+    ],
+    "content": {
+        "details": {
+            "path": "Marketplace.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "screenshots": [
+        {
+            "path": "images/dist/widget-screenshot.png"
+        },
+        {
+            "path": "images/dist/screenshots-vsts-azure-consumption-widget-4.png"
+        },
+        {
+            "path": "images/dist/screenshots-vsts-azure-consumption-widget-4.png"
+        }
+    ],
+    "links": {
+        "getstarted": {
+            "uri": "https://github.com/keesschollaart81/vsts-azure-consumption-widget"
+        },
+        "support": {
+            "uri": "https://github.com/keesschollaart81/vsts-azure-consumption-widget"
+        }
+    },
+    "branding": {
+        "color": "rgb(216, 224, 240)",
+        "theme": "light"
+    },
+    "icons": {
+        "default": "images/dist/icon.png",
+        "large": "images/dist/icon-large.png"
+    },
+    "files": [ 
+        {
+            "path": "src/widget.html",
+            "addressable": true
+        },
+        {
+            "path": "src/widgetconfig.html",
+            "addressable": true
+        },
+        {
+            "path": "images/dist",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        },
+        {
+            "path": "lib",
+            "addressable": true
+        }
+    ], 
+    "contributions": [ 
+        {
+            "id": "vsts-azure-consumption-widget",
+            "type": "ms.vss-dashboards-web.widget",
+            "targets": [
+                "ms.vss-dashboards-web.widget-catalog",
+                ".vsts-azure-consumption-widget.Configuration"
+            ],
+            "properties": {
+                "name": "Azure Consumption Widget",
+                "description": "Azure Consumption Widget",
+                "catalogIconUrl:": "images/dist/widget.png",
+                "previewImageUrl": "images/dist/widget.png",
+                "uri": "src/widget.html",
+                "isNameConfigurable": true,
+                "supportedSizes": [
+                    {
+                        "rowSpan": 1,
+                        "columnSpan": 2
+                    },
+                    {
+                        "rowSpan": 1,
+                        "columnSpan": 1
+                    },
+                    {
+                        "rowSpan": 1,
+                        "columnSpan": 3
+                    },
+                    {
+                        "rowSpan": 1,
+                        "columnSpan": 4
+                    },
+                    {
+                        "rowSpan": 2,
+                        "columnSpan": 2
+                    },
+                    {
+                        "rowSpan": 3,
+                        "columnSpan": 3
+                    }
+                ],
+                "supportedScopes": [
+                    "project_team"
+                ]
+            }
+        },
+        {
+            "id": "vsts-azure-consumption-widget.Configuration",
+            "type": "ms.vss-dashboards-web.widget-configuration",
+            "targets": [
+                "ms.vss-dashboards-web.widget-configuration"
+            ],
+            "properties": {
+                "name": "vsts-azure-consumption-widget Configuration",
+                "description": "Configures vsts-azure-consumption-widget",
+                "uri": "src/widgetconfig.html"
+            }
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/keesschollaart81/vsts-azure-consumption-widget"
+    }
+}
